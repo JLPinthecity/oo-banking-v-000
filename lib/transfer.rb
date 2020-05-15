@@ -18,7 +18,7 @@ class Transfer
     when "pending"
       if self.valid? && @sender.balance > @amount
          @receiver.balance += @amount
-         @sender.balance -= amount
+         @sender.balance -= @amount
          @status = "complete"
       else
         @status = "rejected"
