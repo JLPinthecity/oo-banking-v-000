@@ -22,6 +22,7 @@ class Transfer
          @status = "complete"
       else
         "Transaction rejected. Please check your account balance."
+      end
       binding.pry
      when "complete"
          "Transaction rejected. Please check your account balance."
