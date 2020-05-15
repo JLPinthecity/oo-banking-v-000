@@ -26,7 +26,6 @@ class Transfer
      when "complete"
 
 
-   elsif
 
 
 
