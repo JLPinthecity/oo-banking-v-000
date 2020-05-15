@@ -16,25 +16,20 @@ class Transfer
   def execute_transaction
     case @status
     when "pending"
-      if self.valid?
-         @receiver.balance +=  @sender.balance - self.amount
-         @sender.balance = @sender.balance - self.amount
+      if self.valid? && @sender.balance > @amount
+         @receiver.balance += @amount
+         @sender.balance -= amount
          @status = "complete"
-      else
-        "Transaction rejected. Please check your account balance."
-      end
       binding.pry
      when "complete"
-
-
-
-
-
-
-    end
+         "Transaction rejected. Please check your account balance."
+     end
   end
 
-#sender has to have
+
+
+
+
 
 
 end
