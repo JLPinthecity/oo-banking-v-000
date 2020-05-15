@@ -13,6 +13,6 @@ class Transfer
     @sender.valid? && @receiver.valid?
   end
 
-  
+
 
 end
