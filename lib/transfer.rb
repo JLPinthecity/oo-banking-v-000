@@ -14,9 +14,15 @@ class Transfer
   end
 
   def execute_transaction
-    self.valid?
+    if self.valid? 
+     @receiver.balance +=  @sender.balance - self.amount
+     binding.pry
+   
+      
+    end
   end
 
+#sender has to have 
 
 
 end
